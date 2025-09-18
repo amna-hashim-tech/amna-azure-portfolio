@@ -6,80 +6,67 @@
 <title>Amna Hashim - IT Portfolio</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 <style>
-/* Reset & base */
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.6; color:#333; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); min-height:100vh; }
-a { cursor:pointer; text-decoration:none; }
-/* Header */
-header { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); backdrop-filter:blur(10px); z-index:1000; box-shadow:0 2px 20px rgba(0,0,0,0.1); }
-nav { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; }
-.logo { font-size:1.5rem; font-weight:bold; color:#667eea; }
-.nav-links { display:flex; list-style:none; gap:2rem; }
-.nav-links a { color:#333; font-weight:500; transition:color 0.3s; }
-.nav-links a:hover { color:#667eea; }
-.hamburger { display:none; font-size:1.5rem; cursor:pointer; }
-/* Hero */
-.hero { height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; color:white; position:relative; overflow:hidden; }
-.hero-content { z-index:2; animation: fadeInUp 1s ease-out; }
-.hero h1 { font-size:3.5rem; margin-bottom:1rem; text-shadow:2px 2px 4px rgba(0,0,0,0.3); }
-.hero .subtitle { font-size:1.3rem; margin-bottom:2rem; opacity:0.95; text-shadow:1px 1px 3px rgba(0,0,0,0.3); }
-.cta-button { display:inline-block; background:linear-gradient(45deg,#ff6b6b,#ee5a24); color:white; padding:12px 30px; border-radius:50px; font-weight:bold; transition:transform 0.3s, box-shadow 0.3s; box-shadow:0 4px 15px rgba(0,0,0,0.2); }
-.cta-button:hover { transform:translateY(-2px); box-shadow:0 8px 25px rgba(0,0,0,0.3); }
-/* Particles */
-.particles { position:absolute; top:0; left:0; width:100%; height:100%; overflow:hidden; z-index:1; }
-.particle { position:absolute; width:4px; height:4px; background:rgba(255,255,255,0.5); border-radius:50%; animation: float 6s infinite linear; }
-/* Sections */
-section { padding:100px 0; }
-.section-title { text-align:center; font-size:2.5rem; margin-bottom:3rem; color:#333; position:relative; }
-.section-title::after { content:''; position:absolute; bottom:-10px; left:50%; transform:translateX(-50%); width:50px; height:3px; background:linear-gradient(45deg,#667eea,#764ba2); border-radius:2px; }
-/* About */
-.about-content { display:grid; grid-template-columns:1fr 2fr; gap:3rem; align-items:center; }
-.about-image { text-align:center; }
-.profile-img { width:250px; height:250px; border-radius:50%; object-fit:cover; border:5px solid #667eea; box-shadow:0 10px 30px rgba(0,0,0,0.2); }
-.about-text { font-size:1.1rem; line-height:1.8; color:#666; }
-/* Skills */
-.skills-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2rem; margin-top:3rem; }
-.skill-card { background:white; padding:2rem; border-radius:15px; text-align:center; box-shadow:0 10px 30px rgba(0,0,0,0.1); transition:transform 0.3s, box-shadow 0.3s; }
-.skill-card:hover { transform:translateY(-5px); box-shadow:0 20px 40px rgba(0,0,0,0.15); }
-.skill-icon { font-size:3rem; color:#667eea; margin-bottom:1rem; }
-/* Experience */
-.experience-timeline { max-width:800px; margin:3rem auto 0; position:relative; }
-.timeline-item { background:white; padding:2rem; border-radius:15px; margin-bottom:2rem; box-shadow:0 10px 30px rgba(0,0,0,0.1); position:relative; left:0; animation: slideInLeft 0.6s ease-out; }
-.timeline-item:nth-child(even){ animation: slideInRight 0.6s ease-out; }
-.job-title { color:#667eea; font-size:1.3rem; font-weight:bold; margin-bottom:0.5rem; }
-.company-period { color:#888; font-size:0.9rem; margin-bottom:1rem; }
-.job-description { color:#666; line-height:1.6; }
-.job-description ul { margin-left:1.5rem; margin-top:0.5rem; }
-.job-description li { margin-bottom:0.5rem; }
-/* Projects */
-.projects-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2rem; margin-top:3rem; }
-.project-card { background:white; border-radius:15px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.1); transition:transform 0.3s, box-shadow 0.3s; }
-.project-card:hover { transform:translateY(-10px); box-shadow:0 20px 50px rgba(0,0,0,0.15); }
-.project-image { width:100%; height:200px; background:linear-gradient(45deg,#667eea,#764ba2); display:flex; align-items:center; justify-content:center; color:white; font-size:2rem; }
-.project-content { padding:2rem; }
-.project-content h3 { margin-bottom:1rem; color:#333; }
-.project-content p { color:#666; margin-bottom:1.5rem; }
-.project-links { display:flex; gap:1rem; }
-.project-link { padding:8px 16px; background:#667eea; color:white; border-radius:5px; font-size:0.9rem; transition:background 0.3s; }
-.project-link:hover { background:#5a67d8; }
-/* Contact */
-.contact { background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); color:white; }
-.contact-content { text-align:center; max-width:600px; margin:0 auto; }
-.contact-info { display:flex; justify-content:center; gap:3rem; margin:3rem 0; }
-.contact-item { text-align:center; }
-.contact-item i { font-size:2rem; margin-bottom:1rem; color:#fff; }
-.social-links { display:flex; justify-content:center; gap:2rem; margin-top:2rem; }
-.social-link { display:inline-flex; width:50px; height:50px; background:rgba(255,255,255,0.2); border-radius:50%; align-items:center; justify-content:center; color:white; font-size:1.5rem; transition:background 0.3s, transform 0.3s; }
-.social-link:hover { background:rgba(255,255,255,0.3); transform:translateY(-3px); }
-/* Footer */
-footer { text-align:center; padding:2rem 0; background:#333; color:white; }
-/* Animations */
-@keyframes fadeInUp { from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);} }
-@keyframes slideInLeft { from {opacity:0; transform:translateX(-50px);} to {opacity:1; transform:translateX(0);} }
-@keyframes slideInRight { from {opacity:0; transform:translateX(50px);} to {opacity:1; transform:translateX(0);} }
-@keyframes float { 0%{transform:translateY(100vh) translateX(0px);opacity:0;} 10%{opacity:1;} 90%{opacity:1;} 100%{transform:translateY(-100px) translateX(100px);opacity:0;} }
-/* Responsive */
-@media(max-width:768px){ .nav-links{ display:none; flex-direction:column; background:white; position:absolute; top:70px; right:0; width:200px; padding:1rem; border-radius:8px; box-shadow:0 5px 15px rgba(0,0,0,0.2);} .nav-links.show{ display:flex;} .hamburger{ display:block;} .about-content{ grid-template-columns:1fr; text-align:center;} .contact-info{ flex-direction:column; gap:2rem;} .projects-grid{ grid-template-columns:1fr;} .skills-grid{ grid-template-columns:1fr;} .social-links{ gap:1rem;} .hero h1{ font-size:2.5rem;} .hero .subtitle{ font-size:1.1rem;} }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:#333;background:linear-gradient(135deg,#667eea,#764ba2);line-height:1.6;min-height:100vh;}
+a{text-decoration:none;color:inherit;cursor:pointer;}
+header{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,0.1);}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;}
+.logo{font-size:1.5rem;font-weight:bold;color:#667eea;}
+.nav-links{display:flex;list-style:none;gap:2rem;}
+.nav-links a{color:#333;font-weight:500;transition:color 0.3s;}
+.nav-links a:hover{color:#667eea;}
+.hamburger{display:none;font-size:1.5rem;cursor:pointer;}
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:white;position:relative;overflow:hidden;}
+.hero-content{z-index:2;animation:fadeInUp 1s ease-out;}
+.hero h1{font-size:3.5rem;margin-bottom:1rem;text-shadow:2px 2px 4px rgba(0,0,0,0.3);}
+.hero .subtitle{font-size:1.3rem;margin-bottom:2rem;opacity:0.95;text-shadow:1px 1px 3px rgba(0,0,0,0.3);}
+.cta-button{display:inline-block;background:linear-gradient(45deg,#ff6b6b,#ee5a24);color:white;padding:12px 30px;border-radius:50px;font-weight:bold;transition:transform 0.3s, box-shadow 0.3s;box-shadow:0 4px 15px rgba(0,0,0,0.2);}
+.cta-button:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,0.3);}
+.particles{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;z-index:1;}
+.particle{position:absolute;width:4px;height:4px;background:rgba(255,255,255,0.5);border-radius:50%;animation:float 6s infinite linear;}
+section{padding:100px 0;}
+.section-title{text-align:center;font-size:2.5rem;margin-bottom:3rem;color:#333;position:relative;}
+.section-title::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:50px;height:3px;background:linear-gradient(45deg,#667eea,#764ba2);border-radius:2px;}
+.about-content{display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:center;}
+.about-image{text-align:center;}
+.profile-img{width:250px;height:250px;border-radius:50%;object-fit:cover;border:5px solid #667eea;box-shadow:0 10px 30px rgba(0,0,0,0.2);}
+.about-text{font-size:1.1rem;line-height:1.8;color:#666;}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3rem;}
+.skill-card{background:white;padding:2rem;border-radius:15px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.1);transition:transform 0.3s, box-shadow 0.3s;}
+.skill-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,0.15);}
+.skill-icon{font-size:3rem;color:#667eea;margin-bottom:1rem;}
+.experience-timeline{max-width:800px;margin:3rem auto 0;position:relative;}
+.timeline-item{background:white;padding:2rem;border-radius:15px;margin-bottom:2rem;box-shadow:0 10px 30px rgba(0,0,0,0.1);position:relative;animation:slideInLeft 0.6s ease-out;}
+.timeline-item:nth-child(even){animation:slideInRight 0.6s ease-out;}
+.job-title{color:#667eea;font-size:1.3rem;font-weight:bold;margin-bottom:0.5rem;}
+.company-period{color:#888;font-size:0.9rem;margin-bottom:1rem;}
+.job-description{color:#666;line-height:1.6;}
+.job-description ul{margin-left:1.5rem;margin-top:0.5rem;}
+.job-description li{margin-bottom:0.5rem;}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3rem;}
+.project-card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.1);transition:transform 0.3s, box-shadow 0.3s;}
+.project-card:hover{transform:translateY(-10px);box-shadow:0 20px 50px rgba(0,0,0,0.15);}
+.project-image{width:100%;height:200px;background:linear-gradient(45deg,#667eea,#764ba2);display:flex;align-items:center;justify-content:center;color:white;font-size:2rem;}
+.project-content{padding:2rem;}
+.project-content h3{margin-bottom:1rem;color:#333;}
+.project-content p{color:#666;margin-bottom:1.5rem;}
+.project-links{display:flex;gap:1rem;}
+.project-link{padding:8px 16px;background:#667eea;color:white;border-radius:5px;font-size:0.9rem;transition:background 0.3s;}
+.project-link:hover{background:#5a67d8;}
+.contact{background:linear-gradient(135deg,#667eea,#764ba2);color:white;}
+.contact-content{text-align:center;max-width:600px;margin:0 auto;}
+.contact-info{display:flex;justify-content:center;gap:3rem;margin:3rem 0;}
+.contact-item{text-align:center;}
+.contact-item i{font-size:2rem;margin-bottom:1rem;color:#fff;}
+.social-links{display:flex;justify-content:center;gap:2rem;margin-top:2rem;}
+.social-link{display:inline-flex;width:50px;height:50px;background:rgba(255,255,255,0.2);border-radius:50%;align-items:center;justify-content:center;color:white;font-size:1.5rem;transition:background 0.3s,transform 0.3s;}
+.social-link:hover{background:rgba(255,255,255,0.3);transform:translateY(-3px);}
+footer{text-align:center;padding:2rem 0;background:#333;color:white;}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+@keyframes slideInLeft{from{opacity:0;transform:translateX(-50px);}to{opacity:1;transform:translateX(0);}}
+@keyframes slideInRight{from{opacity:0;transform:translateX(50px);}to{opacity:1;transform:translateX(0);}}
+@keyframes float{0%{transform:translateY(100vh) translateX(0px);opacity:0;}10%{opacity:1;}90%{opacity:1;}100%{transform:translateY(-100px) translateX(100px);opacity:0;}}
+@media(max-width:768px){.nav-links{display:none;flex-direction:column;background:white;position:absolute;top:70px;right:0;width:200px;padding:1rem;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,0.2);}.nav-links.show{display:flex;}.hamburger{display:block;}.about-content{grid-template-columns:1fr;text-align:center;}.contact-info{flex-direction:column;gap:2rem;}.projects-grid{grid-template-columns:1fr;}.skills-grid{grid-template-columns:1fr;}.social-links{gap:1rem;}.hero h1{font-size:2.5rem;}.hero .subtitle{font-size:1.1rem;}}
 </style>
 </head>
 <body>
@@ -91,155 +78,4 @@ footer { text-align:center; padding:2rem 0; background:#333; color:white; }
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-<div class="hamburger"><i class="fas fa-bars"></i></div>
-</nav>
-</header>
-
-<main>
-<!-- Hero -->
-<section id="home" class="hero">
-<div class="particles"></div>
-<div class="hero-content">
-<h1>Amna Hashim</h1>
-<p class="subtitle">Junior IT System Administrator | Cloud & Desktop Support Specialist</p>
-<a href="#projects" class="cta-button">View My Work</a>
-</div>
-</section>
-
-<!-- About -->
-<section id="about" class="about">
-<div class="container">
-<h2 class="section-title">About Me</h2>
-<div class="about-content">
-<div class="about-image">
-<img src="https://via.placeholder.com/250x250/667eea/ffffff?text=Amna+H" alt="Amna Hashim" class="profile-img">
-</div>
-<div class="about-text">
-<p>Hello! I'm an IT professional with 5+ years of experience in digital operations, system monitoring, and IT support. I specialize in troubleshooting hardware, software, and network issues, managing Microsoft 365 tools, and performing system maintenance across Windows and Linux environments.</p>
-<p>Currently based in Dubai, UAE, I've worked with clients including Emirates Group, Sharjah Co-op, VOSS Water, and Nokia Middle East. My expertise spans cloud solutions, system administration, and enterprise-level IT support, with a strong focus on continuous learning and professional development.</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Skills -->
-<section id="skills" class="skills">
-<div class="container">
-<h2 class="section-title">Skills & Technologies</h2>
-<div class="skills-grid">
-<div class="skill-card"><div class="skill-icon"><i class="fab fa-microsoft"></i></div><h3>Microsoft 365 & Windows Server</h3><p>Admin, permissions, system monitoring</p></div>
-<div class="skill-card"><div class="skill-icon"><i class="fas fa-cloud"></i></div><h3>Cloud Solutions</h3><p>Azure, AWS basics, cloud infra</p></div>
-<div class="skill-card"><div class="skill-icon"><i class="fas fa-network-wired"></i></div><h3>Networking & Security</h3><p>DNS/SSL, network troubleshooting, security</p></div>
-<div class="skill-card"><div class="skill-icon"><i class="fas fa-tools"></i></div><h3>IT Support & Maintenance</h3><p>Hardware/software troubleshooting, backups</p></div>
-<div class="skill-card"><div class="skill-icon"><i class="fab fa-linux"></i></div><h3>Operating Systems</h3><p>Windows & Linux admin, cross-platform support</p></div>
-</div>
-</div>
-</section>
-
-<!-- Experience -->
-<section id="experience" class="experience">
-<div class="container">
-<h2 class="section-title">Professional Experience</h2>
-<div class="experience-timeline">
-<div class="timeline-item">
-<div class="job-title">IT & Cloud Solutions Specialist</div>
-<div class="company-period">WEBOLOGY | Dubai | 2020 – Present</div>
-<div class="job-description">
-<ul>
-<li>Managed cloud and on-prem IT infrastructure</li>
-<li>Provided end-user support & system maintenance</li>
-<li>Handled Microsoft 365, Azure, and network solutions</li>
-</ul>
-</div>
-</div>
-<div class="timeline-item">
-<div class="job-title">IT Support Engineer</div>
-<div class="company-period">Nokia Middle East | Dubai | 2018 – 2020</div>
-<div class="job-description">
-<ul>
-<li>Troubleshot hardware and software issues</li>
-<li>Maintained Windows/Linux environments</li>
-<li>Assisted in server and network administration</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Projects -->
-<section id="projects" class="projects">
-<div class="container">
-<h2 class="section-title">Projects</h2>
-<div class="projects-grid">
-<div class="project-card">
-<div class="project-image">Project 1</div>
-<div class="project-content">
-<h3>Cloud Migration</h3>
-<p>Migrated client systems to Azure cloud with minimal downtime.</p>
-<div class="project-links">
-<a href="#" class="project-link">View</a>
-</div>
-</div>
-</div>
-<div class="project-card">
-<div class="project-image">Project 2</div>
-<div class="project-content">
-<h3>Network Setup</h3>
-<p>Configured enterprise network and secured endpoints for client office.</p>
-<div class="project-links">
-<a href="#" class="project-link">View</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Contact -->
-<section id="contact" class="contact">
-<div class="container">
-<h2 class="section-title">Contact Me</h2>
-<div class="contact-content">
-<p>Feel free to reach out for collaboration or inquiries!</p>
-<div class="contact-info">
-<div class="contact-item"><i class="fas fa-envelope"></i><p>amna@example.com</p></div>
-<div class="contact-item"><i class="fas fa-phone"></i><p>+971 50 123 4567</p></div>
-</div>
-<div class="social-links">
-<a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-<a href="#" class="social-link"><i class="fab fa-github"></i></a>
-<a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-</div>
-</div>
-</div>
-</section>
-
-<footer>
-<p>&copy; 2025 Amna Hashim. All rights reserved.</p>
-</footer>
-
-<script>
-// Hamburger toggle
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-hamburger.addEventListener('click', ()=>{ navLinks.classList.toggle('show'); });
-
-// Generate particles
-const particlesContainer = document.querySelector('.particles');
-for(let i=0;i<50;i++){
-    const particle = document.createElement('div');
-    particle.classList.add('particle');
-    particle.style.left = Math.random()*100 + 'vw';
-    particle.style.animationDuration = (4 + Math.random()*4)+'s';
-    particle.style.width = particle.style.height = (2 + Math.random()*4)+'px';
-    particlesContainer.appendChild(particle);
-}
-</script>
-
-</body>
-</html>
+<li
