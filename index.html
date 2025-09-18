@@ -1,79 +1,75 @@
-<!-- About -->
-<section id="about" class="section" aria-labelledby="about-title">
-  <h2 id="about-title">About</h2>
-  <div class="card">
-    <p class="meta">Cloud engineer with web dev and SEO background, documenting automation and architecture with clear, reproducible steps and IaC snippets.</p>
-    <ul class="list">
-      <li>Certs: AZ‑104, AZ‑305</li>
-      <li>Tech: Azure, PowerShell, Bicep/Terraform, GitHub Actions</li>
-      <li>Focus: reliability, cost optimization, least privilege IAM</li>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amna Hashim - Azure Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Roboto', sans-serif; margin:0; padding:0; background:#f5f7fa; color:#333; scroll-behavior:smooth; }
+    header { background: linear-gradient(135deg,#0078D4,#00CFFF); color:#fff; padding:80px 20px; text-align:center; }
+    header h1 { margin:0; font-size:3em; }
+    header p { font-size:1.2em; margin-top:10px; }
+    nav { position:sticky; top:0; background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); display:flex; justify-content:center; padding:10px 0; }
+    nav a { margin:0 15px; color:#0078D4; font-weight:700; text-decoration:none; }
+    nav a:hover { text-decoration:underline; }
+    section { padding:60px 20px; max-width:1000px; margin:0 auto; }
+    h2 { color:#0078D4; margin-bottom:30px; border-bottom:2px solid #0078D4; display:inline-block; padding-bottom:5px; }
+    .project-card { background:#fff; padding:25px; margin-bottom:25px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); transition:transform 0.3s, box-shadow 0.3s; }
+    .project-card:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.2); }
+    .project-card h3 { margin-top:0; color:#0078D4; }
+    .btn { display:inline-block; padding:10px 20px; background:#0078D4; color:#fff; border-radius:5px; text-decoration:none; margin-top:10px; transition:background 0.3s; }
+    .btn:hover { background:#005a9e; }
+    footer { text-align:center; padding:30px; background:#eee; margin-top:50px; font-size:0.9em; }
+    ul { padding-left:20px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Amna Hashim</h1>
+  <p>Azure Cloud Enthusiast | AZ-104 & AZ-305 Certified</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hello! I am passionate about Azure cloud solutions. I have deployed virtual machines, networks, and storage accounts. I am continuously practicing cloud projects to enhance my skills and stay current with Azure technologies.</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project-card">
+    <h3>VM, Network & Storage Deployment</h3>
+    <ul>
+      <li>Created an Ubuntu VM with Nginx web server.</li>
+      <li>Configured Virtual Network (VNet) and Subnet.</li>
+      <li>Set up Network Security Group (NSG) with SSH and HTTP access.</li>
+      <li>Provisioned a Storage Account for files and backups.</li>
+      <li>Live webpage hosted on public IP.</li>
     </ul>
+    <a class="btn" href="#">View Project</a>
   </div>
 </section>
 
-<!-- Projects -->
-<section id="projects" class="section" aria-labelledby="projects-title">
-  <h2 id="projects-title">Azure projects</h2>
-  <div class="grid">
-    <!-- Project 1 -->
-    <article class="card">
-      <h3>App Service To‑Do App</h3>
-      <p class="meta">App Service + Azure SQL + Managed Identity</p>
-      <div class="tags">
-        <span class="tag">IaC: Bicep</span>
-        <span class="tag">GitHub Actions</span>
-        <span class="tag">Cost guardrails</span>
-      </div>
-      <p>Deployed a production‑ready Web App with SQL backend, wired CI/CD and staged rollouts; documented identity‑based connection strings and backup strategy.</p>
-      <p>
-        <a href="https://github.com/YOUR-USERNAME/amna-todo-app" rel="noopener">Repo</a> ·
-        <a href="https://YOUR-USERNAME.github.io/projects/app-service-todo" rel="noopener">Case study</a>
-      </p>
-    </article>
-
-    <!-- Project 2 -->
-    <article class="card">
-      <h3>RG & Network Automation</h3>
-      <p class="meta">PowerShell Az + Policy</p>
-      <div class="tags">
-        <span class="tag">PowerShell</span>
-        <span class="tag">Azure Policy</span>
-        <span class="tag">Tagging</span>
-      </div>
-      <p>Automates resource groups, VNets, NSGs, and tagging standards with drift detection; integrates cost‑center tags in creation workflow.</p>
-      <p>
-        <a href="https://github.com/YOUR-USERNAME/rg-network-automation" rel="noopener">Repo</a> ·
-        <a href="https://YOUR-USERNAME.github.io/projects/rg-automation" rel="noopener">Case study</a>
-      </p>
-    </article>
-
-    <!-- Project 3 -->
-    <article class="card">
-      <h3>Static Site on Pages</h3>
-      <p class="meta">GitHub Pages CI -  Jekyll optional</p>
-      <div class="tags">
-        <span class="tag">Pages</span>
-        <span class="tag">Actions</span>
-        <span class="tag">SEO</span>
-      </div>
-      <p>Zero‑infrastructure static hosting with automated deployments and Lighthouse‑friendly semantics, meta, and responsive design.</p>
-      <p>
-        <a href="https://github.com/YOUR-USERNAME/portfolio" rel="noopener">Repo</a> ·
-        <a href="#contact">Contact</a>
-      </p>
-    </article>
-  </div>
+<section id="contact">
+  <h2>Contact & LinkedIn</h2>
+  <p>Connecting with recruiters on LinkedIn and exploring remote opportunities.</p>
+  <p>Email: <a href="mailto:amna.hashimm1@gmail.com">amna.hashimm1@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/amna-hashim/">https://www.linkedin.com/in/amna-hashim/</a></p>
+  <p>GitHub: <a href="https://github.com/amna-hashim-tech">https://github.com/amna-hashim-tech</a></p>
 </section>
 
-<!-- Contact -->
-<section id="contact" class="section" aria-labelledby="contact-title">
-  <h2 id="contact-title">Contact</h2>
-  <div class="card">
-    <p class="meta">Open to junior cloud roles and Azure automation projects.</p>
-    <div class="socials">
-      <a href="mailto:YOUR-EMAIL">Email</a>
-      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/YOUR-USERNAME" rel="noopener">GitHub</a>
-    </div>
-  </div>
-</section>
+<footer>
+  &copy; 2025 Amna Hashim | Built with ❤️ on GitHub Pages
+</footer>
+
+</body>
+</html>
