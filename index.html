@@ -1,156 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amna Hashim | Azure Cloud Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amna Hashim - Azure Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f6f9;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* Header / Hero */
-    header {
-      background: linear-gradient(135deg, #0078d4, #00aaff);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    /* Section Styling */
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #0078d4;
-    }
-
-    /* About */
-    .about {
-      text-align: center;
-      font-size: 1.1rem;
-    }
-
-    /* Skills */
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-    .skill {
-      background: white;
-      padding: 12px 20px;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      font-weight: bold;
-      color: #0078d4;
-    }
-
-    /* Projects */
-    .project {
-      background: white;
-      padding: 25px;
-      margin: 20px 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .project h3 {
-      margin-top: 0;
-      color: #0078d4;
-    }
-
-    /* Footer */
-    footer {
-      background: #0078d4;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
-    footer a {
-      color: #fff;
-      text-decoration: underline;
-    }
+    body { font-family: 'Roboto', sans-serif; margin:0; padding:0; color:#333; background:#f7f7f7; }
+    header { background:#0078D4; color:#fff; padding:60px 20px; text-align:center; }
+    header h1 { margin:0; font-size:2.5em; }
+    header p { font-size:1.2em; margin-top:10px; }
+    section { padding:50px 20px; max-width:900px; margin:0 auto; }
+    h2 { border-bottom:2px solid #0078D4; display:inline-block; margin-bottom:20px; }
+    .project-card { background:#fff; padding:20px; margin-bottom:20px; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+    .project-card h3 { margin-top:0; color:#0078D4; }
+    footer { text-align:center; padding:20px; background:#eee; margin-top:50px; }
+    a { color:#0078D4; text-decoration:none; }
+    a:hover { text-decoration:underline; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Amna Hashim</h1>
-    <p>Azure Cloud Enthusiast | Building & Showcasing Cloud Projects</p>
-  </header>
 
-  <!-- About -->
-  <section class="about">
-    <h2>About Me</h2>
-    <p>
-      Hi! I’m Amna, a cloud enthusiast with Azure certifications (AZ-104 & AZ-305).  
-      I specialize in deploying and managing Azure resources including Virtual Machines, Networking, and Storage.  
-      This portfolio highlights my journey and hands-on projects in the cloud space.
-    </p>
-  </section>
+<header>
+  <h1>Amna Hashim</h1>
+  <p>Azure Cloud Enthusiast | AZ-104 & AZ-305 Certified</p>
+</header>
 
-  <!-- Skills -->
-  <section>
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill">Azure Virtual Machines</div>
-      <div class="skill">Networking & NSGs</div>
-      <div class="skill">Storage Accounts</div>
-      <div class="skill">Linux / Ubuntu</div>
-      <div class="skill">GitHub & CI/CD</div>
-      <div class="skill">Cloud Security</div>
-    </div>
-  </section>
+<section>
+  <h2>About Me</h2>
+  <p>Hello! I am passionate about Azure cloud solutions. I have deployed virtual machines, networks, and storage accounts, and I am continuously practicing cloud projects to enhance my skills.</p>
+</section>
 
-  <!-- Projects -->
-  <section>
-    <h2>Projects</h2>
+<section>
+  <h2>Projects</h2>
 
-    <div class="project">
-      <h3>VM, Network & Storage Deployment</h3>
-      <p>
-        Demonstrated ability to deploy and manage Azure resources by:
-      </p>
-      <ul>
-        <li>Created an Ubuntu VM with Nginx web server</li>
-        <li>Configured Virtual Network (VNet) and Subnet</li>
-        <li>Set up NSG with SSH and HTTP access</li>
-        <li>Provisioned a Storage Account for backups</li>
-      </ul>
-      <p><strong>Skills:</strong> Azure VM, Networking, Storage, Security</p>
-    </div>
+  <div class="project-card">
+    <h3>VM, Network & Storage Deployment</h3>
+    <p>Demonstrated my ability to deploy and manage Azure resources:</p>
+    <ul>
+      <li>Created an Ubuntu VM with Nginx web server.</li>
+      <li>Configured Virtual Network (VNet) and Subnet.</li>
+      <li>Set up Network Security Group (NSG) with SSH and HTTP access.</li>
+      <li>Provisioned a Storage Account for files and backups.</li>
+      <li>Live webpage hosted on public IP.</li>
+    </ul>
+  </div>
 
-    <div class="project">
-      <h3>Future Projects Coming Soon 🚀</h3>
-      <p>
-        More Azure hands-on labs and deployments will be added here as I continue practicing and building my portfolio.
-      </p>
-    </div>
-  </section>
+  <!-- Add more project cards here as you progress -->
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Amna Hashim | Azure Cloud Portfolio</p>
-    <p>Connect with me on <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></p>
-  </footer>
+<section>
+  <h2>Contact & LinkedIn</h2>
+  <p>Connecting with recruiters on LinkedIn and exploring remote opportunities.</p>
+  <p>Email: <a href="mailto:amna.hashimm1@gmail.com">amna.hashimm1@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/amna-hashim/">https://www.linkedin.com/in/amna-hashim/</a></p>
+</section>
+
+<footer>
+  &copy; 2025 Amna Hashim | Built with ❤️ on GitHub Pages
+</footer>
+
 </body>
 </html>
